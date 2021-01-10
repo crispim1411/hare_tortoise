@@ -5,10 +5,18 @@ Dado uma lista contendo n+1 inteiros onde cada inteiro está entre 1 e n (inclus
 Assumindo que há apenas um número duplicado, encontre-o.
 
 Obs:
+
 Não modifique o array (read-only)
-Use apenas constantes O(1)
+
+Use apenas constantes, memória O(1)
+
 Complexidade temporal deverá ser menor que O(n^2).
+
 Há apenas um número repetido mas pode estar repetido mais de uma vez.
+
+Prova
+------
+De acordo com o Princípio da casa dos pombos serão n+1 itens para para n números (de 1 a n). Pelo menos um número irá ser escrito duas vezes.
 
 Tentativa 1
 ============
@@ -20,8 +28,10 @@ Tentativa 2
 ============
 Usar hashmap para diminuir complexidade temporal, possui tempo de busca constante.
 
-Resultado: Excedeu o uso da memória, complexidade S(N)
+Resultado: Apesar da busca constante excedeu o uso da memória ao montar o hashmap.
 
 Tentativa 3
 ============
 Usando ciclo de detecção de floyd (tartaruga e a lebre).
+
+Resultado: Busca linear e uso da memória constante. 
