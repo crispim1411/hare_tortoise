@@ -6,13 +6,13 @@ Assumindo que há apenas um número duplicado, encontre-o.
 
 Obs:
 
-Não modifique o array (read-only)
+- Não modifique o array (read-only)
 
-Use apenas constantes, memória O(1)
+- Use apenas constantes, memória O(1)
 
-Complexidade temporal deverá ser menor que O(n^2).
+- Complexidade temporal deverá ser menor que O(n^2).
 
-Há apenas um número repetido mas pode estar repetido mais de uma vez.
+- Há apenas um número repetido mas pode estar repetido mais de uma vez.
 
 Prova
 ------
