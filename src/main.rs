@@ -1,8 +1,14 @@
 //Dado uma lista contendo n+1 inteiros onde cada inteiro está entre 1 e n (incluso), prove que pelo menos um número duplicado deve existir. 
 //Assumindo que há apenas um número duplicado, encontre-o.
 
+use rand::Rng;
+const N: u32 = 7;
+
 fn main() {
-    let n: Vec<u32> = vec!(1, 2, 2);
+    let mut n: Vec<u32> = (1..N).collect();
+    let rand = rand::thread_rng().gen_range(1..=N);
+    n.push(rand);
+    println!("List: {:?}", n);
     println!("duplicated: {}", find_duplicated(n));
 }
 
