@@ -13,12 +13,17 @@ fn main() {
 }
 
 fn find_duplicated(nums: Vec<u32>) -> u32 {
-    let mut hare: u32 = nums[0];
-    let mut tortoise: u32 = nums[0];
-
+    let nums: Vec<usize> = nums
+                            .iter()
+                            .map(|&x| x as usize)
+                            .collect();
+                            
+    let mut hare = nums[0];
+    let mut tortoise = nums[0];
+    
     loop {        
-        tortoise = nums[tortoise as usize];
-        hare = nums[nums[hare as usize] as usize];
+        tortoise = nums[tortoise];
+        hare = nums[nums[hare]];
         if tortoise == hare {
             break;
         }
@@ -27,9 +32,9 @@ fn find_duplicated(nums: Vec<u32>) -> u32 {
     let mut ptr1 = nums[0];
     let mut ptr2 = tortoise;
     while ptr1 != ptr2 {
-        ptr1 = nums[ptr1 as usize];
-        ptr2 = nums[ptr2 as usize];
+        ptr1 = nums[ptr1];
+        ptr2 = nums[ptr2];
     }
 
-    return ptr1;
+    return ptr1 as u32;
 }
